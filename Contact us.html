@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="travelcss.css">
+    <title>Contact Us</title>
+</head>
+<body>
+    <section class="nav-bar">
+        <div class="logo">Go Trip</div>
+        <ul class="menu">
+            <li><a href="travel.html">home</a></li>
+            <li><a href="tours.html">tours</a></li>
+            <li><a href="package.html">package</a></li>
+            <li><a href="blog.html">blog</a></li>
+            <li><a href="about us.html">about us</a></li>
+            <li><a href="contact us.html">contact us</a></li>
+        </ul>
+        </div>
+
+    </section>
+    <section id="contact" class="container3">
+        <h2>Contact Us</h2>
+        <form action="">
+            <div class="clearfix">
+            <input id="fname" class="col2 first" type="text" placeholder="FirstName">
+            <input id="lname" class="col2 last" type="text" placeholder="LastName">
+            </div>
+            <div class="clearfix">
+            <input id="email"  class="col2 first" type="email" placeholder="Email">
+            <input id="mobile" class="col2 last" type="text" placeholder="Contact Number">
+            </div>
+            <div class="clearfix">
+            <textarea name="textarea" id="message" cols="30" rows="7" placeholder="Your message here..."></textarea>
+            </div>
+            <div><input onclick="whatsapp()" type="submit" value="Send"></div>
+        </form>
+
+        <script>
+            function whatsapp(){
+                var fn = document.getElementById("fname").value;
+                var ln = document.getElementById("lname").value;
+                var email = document.getElementById("email").value;
+                var mobile = document.getElementById("mobile").value;
+                var message = document.getElementById("message").value;
+
+                var whatsappweb = "https://wa.me/949339397?text="
+                + "Name : " + fn + " " +ln + "%0a"
+                + "Email ID : " + email + "%0a"
+                + "Mobile : " + mobile + "%0a"
+                + "Message From User : " + message;
+
+                window.open(whatsappweb, "_blank");
+            }
+        </script>
+    </section>
+
+</body>
+</html>
